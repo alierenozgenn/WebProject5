@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hoşgeldiniz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-top: 50px;
+            color: #4CAF50;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        
+        a:hover {
+            background-color: #45a049;
+        }
+        
+        button {
+            padding: 12px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 th:text="${message}">Kullanıcı Yönetme Sayfasına Hoşgeldiniz</h1>
+    <p>Kullanıcıları görüntülemek için aşağıya tıklayın:</p>
+    <form action="#" th:action="@{/homePage}" method="get">
+        <button type="submit">Kullanıcı Listesine Git</button>
+    </form>
+</body>
+</html>
